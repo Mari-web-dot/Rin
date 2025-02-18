@@ -10,7 +10,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
   let bot = global.db.data.settings[this.user.jid] || {}
   const isGroupLink = linkRegex.exec(m.text)
   const grupo = `https://chat.whatsapp.com`
-  if (isAdmin && chat.antiLink && m.text.includes(grupo)) return conn.reply(m.chat, `💖 *¡Ohayo, preciosa! El anti-enlace está activado, pero como eres admin, estás a salvo esta vez~*`, m, rcanal)
+  if (isAdmin && chat.antiLink && m.text.includes(grupo)) return conn.reply(m.chat, `💖 *¡Ohayo, precios@! El anti-enlace está activado, pero como eres admin, estás a salvo esta vez~*`, m, rcanal)
   if (chat.antiLink && isGroupLink && !isAdmin) {
     if (isBotAdmin) {
       const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
