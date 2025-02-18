@@ -1,6 +1,7 @@
-const packname = "🌸 𝑨𝒏𝒊𝒌𝒂 𝑫𝒎 🌸"; // Nombre del pack con estilo japonés
+const packname = "🌸 Anika-Bot 🌸"; // Nombre con estilo japonés
+const imageUrl = "https://qu.ax/UchKC.jpg"; // URL de la imagen
 
-let handler = async (m, { usedPrefix, command }) => {
+let handler = async (m, { usedPrefix, command, conn }) => {
   let uptime = await process.uptime();
   let runtime = `┏━✦ *${packname}* ✦━┓
 ┃  
@@ -9,7 +10,8 @@ let handler = async (m, { usedPrefix, command }) => {
 ┃  
 ┗━✦ 𝑷𝒓𝒐𝒕𝒆𝒄𝒄𝒊𝒐́𝒏 & 𝑭𝒖𝒆𝒓𝒛𝒂 ✦━┛`;
 
-  conn.reply(m.chat, runtime, m);
+  // Enviar imagen junto con el mensaje
+  conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: runtime }, { quoted: m });
 };
 
 handler.help = ['runtime'];
