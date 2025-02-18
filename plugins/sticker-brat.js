@@ -2,9 +2,8 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
-import {
-    tmpdir
-} from 'os';
+import { tmpdir } from 'os';
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const fetchSticker = async (text, attempt = 1) => {
@@ -26,13 +25,10 @@ const fetchSticker = async (text, attempt = 1) => {
     }
 };
 
-const handler = async (m, {
-    text,
-    conn
-}) => {
+const handler = async (m, { text, conn }) => {
     if (!text) {
         return conn.sendMessage(m.chat, {
-            text: `${emoji} Por favor ingresa el texto para hacer un sticker.`,
+            text: 'Por favor ingresa el texto para hacer un sticker.',
         }, {
             quoted: m
         });
@@ -61,17 +57,18 @@ const handler = async (m, {
                 url: outputFilePath
             },
         }, {
-            quoted: fkontak
+            quoted: m
         });
         fs.unlinkSync(outputFilePath);
     } catch (error) {
         return conn.sendMessage(m.chat, {
-            text: `${msm} Ocurrio un error.`,
+            text: 'Ocurrió un error.',
         }, {
             quoted: m
         });
     }
 };
+
 handler.command = ['brat'];
 handler.tags = ['sticker'];
 handler.help = ['brat *<texto>*'];
