@@ -1,53 +1,42 @@
-let linkRegex = /chat\.whatsapp\.com\/([A-Za-z0-9]{20,24})/i;
-let linkRegex1 = /whatsapp\.com\/channel\/([A-Za-z0-9]{20,24})/i;
+const groupLinkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i;
+const channelLinkRegex = /whatsapp.com\/channel\/([0-9A-Za-z]+)/i;
 
-export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner, participants }) {
-    if (!m.isGroup) return;
-    if (isAdmin || isOwner || m.fromMe || isROwner) return;
+export async function before(m, { conn, isAdmin, isBotAdmin }) {
+    if (!m || !m.text) return;
+    if (m.isBaileys && m.fromMe) return !0;
+    if (!m.isGroup) return !1;
 
-    let chat = global.db.data.chats[m.chat];
-    let delet = m.key.participant;
-    let bang = m.key.id;
-    const user = `@${m.sender.split('@')[0]}`;
-    const groupAdmins = participants.filter(p => p.admin);
-    const listAdmin = groupAdmins.map((v, i) => `*» `${{i + 1}. @}$`{v.id.split('@')[0]}*`).join('\n');
-    let bot = global.db.data.settings[this.user.jid] || {};
+    let chat = global.db?.data?.chats?.[m.chat];
+    if (!chat || !chat.antiLink) return !0;
 
-    // Verificar si el mensaje contiene un enlace de grupo o canal
-    const isGroupLink = linkRegex.exec(m.text) || linkRegex1.exec(m.text);
-    const grupo = 'https://chat.whatsapp.com';
+    console.log(`[LOG] Mensaje recibido en grupo: ${m.chat}, de: ${m.sender}`);
+    
+    let isGroupLink = m.text.match(groupLinkRegex);
+    let isChannelLink = m.text.match(channelLinkRegex);
 
-    console.log("Mensaje recibido:", m.text); // Depuración: Ver el mensaje recibido
-    console.log("Enlace detectado:", isGroupLink); // Depuración: Ver si se detectó un enlace
-
-    if (isAdmin && chat.antiLink && m.text.includes(grupo)) {
-        return m.reply(`✦ El antilink está activo pero te salvaste por ser admin.`);
-    }
-
-    if (chat.antiLink && isGroupLink && !isAdmin) {
+    if ((isGroupLink || isChannelLink) && !isAdmin) {
         if (isBotAdmin) {
-            const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`;
-            if (m.text.includes(linkThisGroup)) return;
+            try {
+                const linkThisGroup = `https://chat.whatsapp.com/${await conn.groupInviteCode(m.chat)}`;
+                if (isGroupLink && m.text.includes(linkThisGroup)) return !0;
+            } catch (error) {
+                console.error("[ERROR] No se pudo obtener el código del grupo:", error);
+            }
         }
 
-        await conn.sendMessage(m.chat, {
-            text: `*「 ENLACE DETECTADO 」*\n\n《✧》${user} Rompiste las reglas del Grupo serás eliminado...`,
-            mentions: [m.sender]
-        }, { quoted: m, ephemeralExpiration: 24 * 60 * 100, disappearingMessagesInChat: 24 * 60 * 100 });
-
-        if (!isBotAdmin) {
-            return conn.sendMessage(m.chat, {
-                text: `✦ El antilink está activo pero no puedo eliminarte porque no soy admin.`,
-                mentions: [...groupAdmins.map(v => v.id)]
-            }, { quoted: m });
-        }
+        await conn.reply(m.chat, `*≡ Enlace Detectado*
+            
+No permitimos enlaces de ${isChannelLink ? 'canales' : 'otros grupos'}. Lo siento, *@${m.sender.split('@')[0]}*, serás expulsado. ${isBotAdmin ? '' : '\n\nNo soy admin así que no te puedo expulsar :v'}`, null, { mentions: [m.sender] });
 
         if (isBotAdmin) {
-            await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet } });
-            let responseb = await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
-            if (responseb[0].status === "404") return;
+            try {
+                await conn.sendMessage(m.chat, { delete: m.key });
+                await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
+                console.log(`[LOG] Usuario ${m.sender} eliminado del grupo ${m.chat}`);
+            } catch (error) {
+                console.error("[ERROR] No se pudo eliminar el mensaje o expulsar al usuario:", error);
+            }
         }
     }
-
-    return;
+    return !0;
 }
