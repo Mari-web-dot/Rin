@@ -28,20 +28,20 @@ console.log(`Error : ${e}`)
 }}
   
 //creador y otros
-global.creador = 'Wa.me/584120346669'
+global.creador = 'Wa.me/5216631079388'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'Wa.me/584120346669'
-global.namechannel = 'ᥫ᭡ ᥡᥙkіᑲ᥆𝗍-mძ - ᥙ⍴ძᥲ𝗍ᥱs ❀'
-global.namechannel2 = 'ᥫ᭡ ᥡᥙkіᑲ᥆𝗍-mძ - ᥲ᥎іs᥆s ❀"'
-global.namegrupo = '.•♫•♬• ʏᴜᴋɪ-ꜱᴜᴏᴜ-ʙᴏᴛ  •♬•♫•.'
+global.asistencia = 'Wa.me/5216631079388'
+global.namechannel = 'ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭 - ᥙ⍴ძᥲ𝗍ᥱs ❀'
+global.namechannel2 = 'ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭 - ᥲ᥎іs᥆s ❀"'
+global.namegrupo = '.•♫•♬• 🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭 -ʙᴏᴛ  •♬•♫•.'
 global.namecomu = '✿:･✧ 𝓨𝓾𝓴𝓲 𝓢𝓾𝓸𝓾 𝓒𝓸𝓶𝓾𝓷𝓲𝓽𝔂 ✧･:✿'
 global.listo = '🍬 *Aquí tienes ฅ^•ﻌ•^ฅ*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg')
 
 //Ids channel
-global.idchannel = '120363343811229130@newsletter'
-global.canalIdM = ["120363322713003916@newsletter", "120363343811229130@newsletter"]
-global.canalNombreM = ["ᥫ᭡ ᥡᥙkіᑲ᥆𝗍-mძ - ᥙ⍴ძᥲ𝗍ᥱs ❀", "ᥫ᭡ ᥡᥙkіᑲ᥆𝗍-mძ - ᥲ᥎іs᥆s ❀"]
+global.idchannel = '120363392571425662@newsletter'
+global.canalIdM = ["120363393500238364@newsletter", "120363392571425662@newsletter"]
+global.canalNombreM = ["ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭-mძ - ᥙ⍴ძᥲ𝗍ᥱs ❀", "ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭-mძ - ᥲ᥎іs᥆s ❀"]
 global.channelRD = await getRandomChannel()
 
 //fechas
@@ -74,11 +74,11 @@ global.waittt = '🍭 Espera un momento, soy lenta...';
 global.waitttt = '🍭 Espera un momento, soy lenta...';
 
 //Enlaces
-var canal = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'  
-let canal2 = 'https://whatsapp.com/channel/0029VavzewJLikg78gILRn1o'
-var git = 'https://github.com/The-King-Destroy'
-var github = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot' 
-let correo = 'thekingdestroy507@gmail.com'
+var canal = 'https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24'  
+let canal2 = 'https://whatsapp.com/channel/0029Vb3RqSd5vKA6LnYgOS1f'
+var git = 'https://github.com/Aqua200/Yuki.git'
+var github = 'https://github.com/Aqua200/Yuki.git' 
+let correo = 'chiquepapa@gmail.com'
 
 global.redes = [canal, canal2, git, github, correo].getRandom()
 
