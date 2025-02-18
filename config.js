@@ -17,21 +17,21 @@ global.confirmCode = ''
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-  ['584120346669', 'ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
-  ['5212441357601', '𝓔𝓶𝓶𝓪 𝓥𝓲𝓸𝓵𝓮𝓽𝓼 𝓥𝓮𝓻𝓼𝓲ó𝓷', true],
-  ['50557865603',  'Niño Piña', true],
-  ['5216671548329', '𝓛𝓮𝓰𝓷𝓪', true],
-  ['584148256527', 'Perrita diomar', true],
-  ['5212431268546', 'I\'m Fz (Tesis)', true],
-  ['584128382768'],
-  ['5216646666666'],
-  ['5219666666666']
+  ['5216631079388', 'Neykoor', true],
+  ['', '', true],
+  ['',  '', true],
+  ['', '', true],
+  ['', '', true],
+  ['', '', true],
+  [''],
+  [''],
+  ['']
 ];
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.mods = ['50488198573', '584120515006', '51991055096', '573004828388', '573154062343', '5219541690054']
-global.suittag = ['584120346669'] //Cambiar a tu número si vas a usar la base.
+global.mods = ['', '', '', '', '', '']
+global.suittag = [''] //Cambiar a tu número si vas a usar la base.
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -49,13 +49,13 @@ global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐘𝐮𝐤𝐢-𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✰⪜'
-global.botname = 'ᥡᥙkі-sᥙ᥆ᥙ-ᑲ᥆𝗍'
-global.wm = 'ৎ୭࠭͢𝐘𝐮𝐤𝐢_𝐒𝐮𝐨𝐮-𝐁𝐨𝐭ⷭ𓆪͟͞ '
-global.author = 'Made By ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.textbot = 'Yυƙι-Sυσυ-Bσƚ • Powered By ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.etiqueta = 'ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
+global.packname = '🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭'
+global.botname = '🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭'
+global.wm = '🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭'
+global.author = 'Made By ⁱᵃᵐ Neykoor'
+global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ Neykoor'
+global.textbot = '🦋𝐀𝐧𝐢𝐤𝐚-𝐁✨𝐭 • Powered By Neykoor'
+global.etiqueta = 'Neykoor'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -72,13 +72,13 @@ global.photoSity = [catalogo]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = 'https://chat.whatsapp.com/Ecz881bBgqPIWjDOaKkp7E'
-global.comunidad1 = 'https://chat.whatsapp.com/EwrwcGvpLf1BnMhP3B4axD'
-global.channel = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'
-global.channel2 = 'https://whatsapp.com/channel/0029VavzewJLikg78gILRn1o'
-global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
-global.correo = 'thekingdestroy507@gmail.com'
-global.cn ='https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T';
+global.gp1 = 'https://chat.whatsapp.com/LrCs5899n7QASG7c2PIucL'
+global.comunidad1 = 'https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24'
+global.channel = 'https://whatsapp.com/channel/0029Vb3RqSd5vKA6LnYgOS1f'
+global.channel2 = 'https://whatsapp.com/channel/0029Vb3uTsb90x2rvI6D3G3b'
+global.md = 'https://github.com/Aqua200/Yuki.git'
+global.correo = 'chiquepapa@gmail.com'
+global.cn ='https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24';
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
