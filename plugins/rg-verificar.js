@@ -9,9 +9,23 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   let mentionedJid = [who]
 
-  // Usamos fetch en lugar de axios
   let delirius = await fetch(`https://deliriussapi-oficial.vercel.app/tools/country?text=${PhoneNumber('+' + m.sender.replace('@s.whatsapp.net', '')).getNumber('international')}`)
-  let paisdata = await delirius.json() // Convertir la respuesta de la API a JSON
+  let paisdata
+
+  try {
+    // Verificamos si la respuesta es un JSON válido
+    if (delirius.ok) {
+      paisdata = await delirius.json()
+    } else {
+      // Si la respuesta no es OK, se maneja el error
+      throw new Error('API response no válida')
+    }
+  } catch (e) {
+    // Si ocurre algún error, mostramos un mensaje
+    console.error('Error al obtener los datos de la API: ', e)
+    paisdata = { name: 'Desconocido', emoji: '🏳️' }
+  }
+
   let mundo = paisdata ? `${paisdata.name} ${paisdata.emoji}` : 'Desconocido'
 
   let bio = 0, fechaBio
@@ -30,7 +44,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/QGAVS.jpg')
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
-  
+
   if (user.registered === true) return m.reply(`🍭 Ya estás registrado.\n\n*¿Quiere volver a registrarse?*\n\nUse este comando para eliminar su registro.\n*${usedPrefix}unreg*`)
   
   if (!Reg.test(text)) return m.reply(`🌹 Formato incorrecto.\n\nUso del comando: *${usedPrefix + command} nombre.edad*\nEjemplo : *${usedPrefix + command} ${name2}.666*`)
