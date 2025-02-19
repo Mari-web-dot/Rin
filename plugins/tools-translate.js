@@ -2,7 +2,7 @@ import translate from '@vitalets/google-translate-api';
 import fetch from 'node-fetch';
 
 const handler = async (m, { args, usedPrefix, command }) => {
-  const msg = `${emoji} U-umm... ¿Podrías escribir el (idioma) (texto) para que lo traduzca? 💖✨`;
+  const msg = ` U-umm... ¿Podrías escribir el (idioma) (texto) para que lo traduzca? 💖✨`;
   if (!args || !args[0]) return m.reply(msg);
 
   let lang = args[0];
