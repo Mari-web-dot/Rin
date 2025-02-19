@@ -20,7 +20,6 @@ let handler = async (m, { conn, args }) => {
 │✰ Experiencia » ${exp.toLocaleString()}
 │✦ Nivel » ${nivel}
 │❖ Rango » ${role}
-│ Tiempo Activa » %muptime
 │${dev}
 ╰─────────────────
 ᥴrᥱᥲ ᥙᥒ sᥙᑲ-ᑲ᥆𝗍 ᥴ᥆ᥒ 𝗍ᥙ ᥒúmᥱr᥆ ᥙ𝗍іᥣіzᥲᥒძ᥆ *#serbot* o *#serbot code*
