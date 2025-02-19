@@ -62,22 +62,9 @@ global.etiqueta = 'Neykoor'
 global.moneda = 'Yenes'
 global.welcom1 = 'Edita Con #setwelcome'
 global.welcom2 = 'Edita Con #setbye'
+global.banner = 'https://qu.ax/UchKC.jpg'
+global.avatar = 'https://qu.ax/CDFVv.jpg'
 
-//* Imágenes aleatorias para banner y avatar *//
-global.banners = [
-  'https://qu.ax/RSrBo.jpg',
-  'https://qu.ax/YkCtt.jpg',
-  'https://qu.ax/sjymW.jpg'
-];
-
-global.avatars = [
-  'https://qu.ax/YQdTW.jpg',
-  'https://qu.ax/LDdfg.jpg',
-  'https://qu.ax/Ynccm.jpg'
-];
-
-global.getBanner = () => banners[Math.floor(Math.random() * banners.length)];
-global.getAvatar = () => avatars[Math.floor(Math.random() * avatars.length)];
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.catalogo = fs.readFileSync('./src/catalogo.jpg');
