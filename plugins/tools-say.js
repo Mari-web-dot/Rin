@@ -1,7 +1,11 @@
-let handler = async (m, { conn, args }) => {
-    if (!args.length) return conn.sendMessage(m.chat, { text: `${emoji} Por favor, escribe el texto que deseas repetir.` });
-    let message = args.join(' ');
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args.length) {
+        return conn.sendMessage(m.chat, { 
+            text: `*U-Um...* parece que olvidaste escribir algo~\n\n☁️ *Así se usa:* \n➤ *${usedPrefix + command} [texto]*\n\n✨ Ejemplo:\n*${usedPrefix + command} Hola... ¿me extrañaste?* (>//<)`, 
+        });
+    }
 
+    let message = args.join(' ');
     let invisibleChar = '\u200B';
     let finalMessage = invisibleChar + message;
 
@@ -12,7 +16,8 @@ let handler = async (m, { conn, args }) => {
         conn.sendMessage(m.chat, { text: finalMessage });
     }
 };
-handler.command = ['say', 'decir']
+handler.command = ['say', 'decir'];
 handler.tag = ['tools'];
 handler.group = true;
+
 export default handler;
