@@ -1,6 +1,5 @@
 import { exec } from 'child_process';
 import { performance } from 'perf_hooks';
-import fs from 'fs';
 
 let handler = async (m, { conn, rcanal, text }) => {
     let startTime = performance.now();
@@ -12,9 +11,6 @@ let handler = async (m, { conn, rcanal, text }) => {
         // ⏱️ Medir la latencia
         let endTime = performance.now();
         let latency = (endTime - startTime).toFixed(4);
-
-        // 📄 Guardar la latencia
-        logLatency(latency);
 
         // 🌸 URL personalizada si el usuario la proporciona
         let url = text || "https://i.imgur.com/6Y2Z9jX.jpeg"; // Imagen por defecto
@@ -56,14 +52,6 @@ function execPromise(command, { timeout } = {}) {
                 reject(new Error("timed out"));
             }, timeout);
         }
-    });
-}
-
-// 🌸 Función para registrar la latencia en un archivo
-function logLatency(latency) {
-    const logMessage = `💖 Latencia: ${latency} ms - ${new Date().toISOString()}\n`;
-    fs.appendFile('latency.log', logMessage, (err) => {
-        if (err) console.error('﹕💔 O-oh no... n-no pude guardar esto... (｡•́︿•̀｡)', err);
     });
 }
 
