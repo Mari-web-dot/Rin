@@ -10,12 +10,10 @@ let staff = `🌹 *EQUIPO DE AYUDANTES* 🌹
 
  Neykoor💜
 ☄️ *Rol:* Creador
-${creador},
 
 
 🌃 *Colaboradores:*
 
-Por el momento no hay
 
 
 
