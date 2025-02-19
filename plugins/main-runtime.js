@@ -1,6 +1,6 @@
 const packname = "🌸✨ 𝑨𝒏𝒊𝒌𝒂 ✨🌸"; // Nombre elegante del bot  
-const image1 = "https://qu.ax/iKouo.jpeg"; // Imagen cuando lleva poco tiempo activo  
-const image2 = "https://qu.ax/SQnJQ.jpg"; // Imagen cuando lleva más de un día  
+const image1 = "https://qu.ax/sjymW.jpg"; // Imagen cuando lleva poco tiempo activo  
+const image2 = "https://qu.ax/RSrBo.jpg"; // Imagen cuando lleva más de un día  
 
 let handler = async (m, { conn }) => {  
   let uptime = await process.uptime();  
