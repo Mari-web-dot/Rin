@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
   🦋✨ Siempre lista para ayudarte~ ✨🦋  
   ━━━━━━━━━━━━━━━━━━  
   ⏳ *Tiempo activo:*  
-  🕰️ ${uptimeText}  
+   ${uptimeText}  
   ━━━━━━━━━━━━━━━━━━  
   💕 N-no sé si es mucho...  
   🌺 P-pero hago mi mejor esfuerzo...  
