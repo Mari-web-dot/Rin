@@ -1,4 +1,4 @@
-const packname = "🌸 𝑨𝒏𝒊𝒌𝒂 𝑫𝒎 🌸"; // Nombre elegante del bot  
+const packname = "🌸✨ 𝑨𝒏𝒊𝒌𝒂 ✨🌸"; // Nombre elegante del bot  
 const image1 = "https://qu.ax/iKouo.jpeg"; // Imagen cuando lleva poco tiempo activo  
 const image2 = "https://qu.ax/SQnJQ.jpg"; // Imagen cuando lleva más de un día  
 
@@ -8,16 +8,18 @@ let handler = async (m, { conn }) => {
   let imageUrl = uptime >= 86400 ? image2 : image1; // Si el bot lleva más de un día, cambia la imagen  
 
   let runtimeMessage = `  
-  ╭───────────🌸  
-  │ *Ah...* ¿M-me estabas buscando...?  
-  │ 𝑨𝒏𝒊𝒌𝒂 sigue aquí...    
-  │  
-  │ ⏳ *Tiempo activo:*  
-  │   🕰️ ${uptimeText}  
-  │  
-  │ N-no sé si es mucho...  
-  │ P-pero estoy tratando de hacer un buen trabajo...  
-  ╰───────────🌸  
+  🌸🌷━━━━━━━━━━━━🌷🌸  
+  *A-ah... ¿M-me estabas buscando?* (⁄ ⁄>⁄ω⁄<⁄ ⁄)  
+  💖 𝑨𝒏𝒊𝒌𝒂 sigue aquí, a tu lado...  
+  🦋✨ Siempre lista para ayudarte~ ✨🦋  
+  ━━━━━━━━━━━━━━━━━━  
+  ⏳ *Tiempo activo:*  
+  🕰️ ${uptimeText}  
+  ━━━━━━━━━━━━━━━━━━  
+  💕 N-no sé si es mucho...  
+  🌺 P-pero hago mi mejor esfuerzo...  
+  💫 Gracias por contar conmigo...  
+  🌸🌷━━━━━━━━━━━━🌷🌸  
   `;  
 
   // Enviar imagen con el mensaje decorado  
@@ -38,8 +40,8 @@ function rTime(seconds) {
   var m = Math.floor((seconds % 3600) / 60);  
   var s = Math.floor(seconds % 60);  
   var dDisplay = d > 0 ? `🌷 ${d} ${d == 1 ? "día" : "días"}, ` : "";  
-  var hDisplay = h > 0 ? `✨ ${h} ${h == 1 ? "hora" : "horas"}, ` : "";  
-  var mDisplay = m > 0 ? `🍃 ${m} ${m == 1 ? "minuto" : "minutos"}, ` : "";  
-  var sDisplay = s > 0 ? `💠 ${s} ${s == 1 ? "segundo" : "segundos"}` : "";  
+  var hDisplay = h > 0 ? `💖 ${h} ${h == 1 ? "hora" : "horas"}, ` : "";  
+  var mDisplay = m > 0 ? `🍀 ${m} ${m == 1 ? "minuto" : "minutos"}, ` : "";  
+  var sDisplay = s > 0 ? `💎 ${s} ${s == 1 ? "segundo" : "segundos"}` : "";  
   return dDisplay + hDisplay + mDisplay + sDisplay;  
 }
