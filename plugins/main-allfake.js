@@ -35,7 +35,7 @@ global.namechannel = 'ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐒𝐭𝐞𝐥𝐥𝐚�
 global.namechannel2 = 'ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐒𝐭𝐞𝐥𝐥𝐚✨ - 𝐚𝐯𝐢𝐬𝐨𝐬 ❀"'
 global.namegrupo = '.•♫•♬• 🦋𝐀𝐧𝐢𝐤𝐚-𝐒𝐭𝐞𝐥𝐥𝐚✨ - 𝐁𝐨𝐭  •♬•♫•.'
 global.namecomu = '✿:･✧ 𝐴𝑛𝑖𝑘𝑎 𝑆𝑡𝑒𝑙𝑙𝑎 𝑐𝑜𝑚𝑚𝑢𝑛𝑖𝑡𝑦  ✧･:✿'
-global.listo = '❤️ *Aquí tienes ฅ^•ﻌ•^ฅ*'
+global.listo = ' *Aquí tienes... 🥺*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg')
 
 //Ids channel
@@ -112,7 +112,7 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [
-'https://tinyurl.com/285a5ejf',
+'https://qu.ax/gSXFy.jpg',
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
