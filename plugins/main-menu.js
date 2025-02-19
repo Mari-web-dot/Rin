@@ -12,7 +12,7 @@ let handler = async (m, { conn, args }) => {
   let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg');
 
   let txt = `
-һ᥆ᥣᥲ! s᥆ᥡ  *${botname}*  ٩(˘◡˘)۶
+һ᥆ᥣᥲ! s᥆ᥡ  *${botname}* 
 ᥲ𝗊ᥙí 𝗍іᥱᥒᥱs ᥣᥲ ᥣіs𝗍ᥲ ძᥱ ᥴ᥆mᥲᥒძ᥆s
 ╭┈ ↷
 │ᰔᩚ Cliente » @${userId.split('@')[0]}
@@ -20,6 +20,7 @@ let handler = async (m, { conn, args }) => {
 │✰ Experiencia » ${exp.toLocaleString()}
 │✦ Nivel » ${nivel}
 │❖ Rango » ${role}
+│ Tiempo Activa » %muptime
 │${dev}
 ╰─────────────────
 ᥴrᥱᥲ ᥙᥒ sᥙᑲ-ᑲ᥆𝗍 ᥴ᥆ᥒ 𝗍ᥙ ᥒúmᥱr᥆ ᥙ𝗍іᥣіzᥲᥒძ᥆ *#serbot* o *#serbot code*
