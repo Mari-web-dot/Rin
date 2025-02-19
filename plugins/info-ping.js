@@ -2,33 +2,35 @@ import { exec } from 'child_process';
 import { performance } from 'perf_hooks';
 import fs from 'fs';
 
-// Función principal del handler
+// 🌸 Handler principal con un estilo más tímido y ordenado
 let handler = async (m, { conn, rcanal }) => {
     let startTime = performance.now();
 
     try {
-        // Ejecutar el comando 'neofetch' con un tiempo de espera
+        // ⏳ Ejecutar 'neofetch' con un tiempo de espera
         const { stdout, stderr } = await execPromise(`neofetch --stdout`, { timeout: 5000 });
 
         if (stderr) throw new Error(`neofetch stderr: ${stderr}`);
 
         let systemInfo = stdout.toString("utf-8").replace(/Memory:/, "Ram:");
 
-        // Medir la latencia
+        // ⏱️ Medir la latencia
         let endTime = performance.now();
         let latency = (endTime - startTime).toFixed(4);
 
-        // Registrar la latencia en un archivo
+        // 📄 Guardar la latencia en un archivo
         logLatency(latency);
 
-        // Responder al usuario con un diseño más tímido y tierno
-        let response = `*﹕🌸 𝒜𝒶... e-está bien... aquí tienes...*\n` +
-                       `*╭────── ⋆⋅☆⋅⋆ ──────╮*\n` +
-                       `*│ 📡 𝒱𝑒𝓁𝑜𝒸𝒾𝒹𝒶𝒹:* *${latency} ms...* (e-es rápido, ¿v-verdad?)\n` +
-                       `*│ 💻 𝒯𝓊 𝓈𝒾𝓈𝓉𝑒𝓂𝒶...* u-umm...\n` +
-                       `*│ ✨ ${systemInfo}*\n` +
-                       `*╰────── ⋆⋅☆⋅⋆ ──────╯*\n` +
-                       `*﹕¡E-espero que sea de ayuda! (>///<)*`;
+        // 🌸 Mensaje decorado y organizado
+        let response = `
+*┏━━━✦ ❀ ✦━━━┓*
+*┃  💕 A-aquí tienes...*  
+*┃  📡 Velocidad: ${latency} ms...*  
+*┃  💻 T-tu sistema... u-umm...*  
+*┃  ✨ ${systemInfo}*  
+*┗━━━✦ ❀ ✦━━━┛*
+*﹕¡E-espero que te sirva! (>///<)*
+        `;
 
         conn.reply(m.chat, response, m, rcanal);
     } catch (error) {
@@ -37,7 +39,7 @@ let handler = async (m, { conn, rcanal }) => {
     }
 };
 
-// Función para ejecutar comandos en la terminal con promesas
+// 🌸 Función para ejecutar comandos en la terminal con promesas
 function execPromise(command, { timeout } = {}) {
     return new Promise((resolve, reject) => {
         const process = exec(command, (error, stdout, stderr) => {
@@ -54,7 +56,7 @@ function execPromise(command, { timeout } = {}) {
     });
 }
 
-// Función para registrar la latencia en un archivo
+// 🌸 Función para registrar la latencia en un archivo
 function logLatency(latency) {
     const logMessage = `💖 Latencia: ${latency} ms - ${new Date().toISOString()}\n`;
     fs.appendFile('latency.log', logMessage, (err) => {
@@ -62,7 +64,7 @@ function logLatency(latency) {
     });
 }
 
-// Configuración del handler
+// 🌸 Configuración del handler
 handler.help = ['ping'];
 handler.tags = ['info'];
 handler.command = ['ping'];
