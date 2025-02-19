@@ -54,15 +54,15 @@ global.welcom2 = 'Edita Con #setbye'
 
 //* Imágenes aleatorias para banner y avatar *//
 global.banners = [
-  'https://qu.ax/UchKC.jpg',
-  'https://qu.ax/iKouo.jpeg',
-  'https://qu.ax/SQnJQ.jpg'
+  'https://qu.ax/RSrBo.jpg',
+  'https://qu.ax/YkCtt.jpg',
+  'https://qu.ax/sjymW.jpg'
 ];
 
 global.avatars = [
-  'https://qu.ax/CDFVv.jpg',
-  'https://qu.ax/Xyz123.jpg',
-  'https://qu.ax/Abc456.jpg'
+  'https://qu.ax/YQdTW.jpg',
+  'https://qu.ax/LDdfg.jpg',
+  'https://qu.ax/Ynccm.jpg'
 ];
 
 global.getBanner = () => banners[Math.floor(Math.random() * banners.length)];
