@@ -8,22 +8,10 @@ let staff = `✨ *EQUIPO DE AYUDANTES*
 • Destroy
 🤴 *Rol:* Propietario
 📱 *Número:* wa.me/584120346669
-✨️ *GitHub:* https://github.com/The-King-Destroy
 
 🚀  *Colaboradores:*
 
-• Emma-Violets-Versión 
-🦁 *Rol:* Developer
-📱 *Número:* Wa.me/522441357601
 
-• Niño Piña
-🐯 *Rol:* Contribuidor
-📱 *Número:* Wa.me/50557865603
-
-• Legna
-💻 *Rol:* Soporte 
-📱 *Número:* Wa.me/526671548329
-`
 await conn.sendFile(m.chat, icons, 'yaemori.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
