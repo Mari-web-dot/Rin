@@ -5,7 +5,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 
     👑 *Propietario:*
 
-    • Destroy
+    • Neykoor💜
     🤴 *Rol:* Propietario
     📱 *Número:* wa.me/5216631079388
 
