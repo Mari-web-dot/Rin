@@ -2,6 +2,7 @@
   "name": "Yuki_Suou-Bot",
   "version": "2.2.0",
   "description": "Super WhatsApp Bot Multi Device",
+  "type": "module",
   "main": "index.js",
   "directories": {
     "lib": "lib",
