@@ -20,7 +20,7 @@ let handler = async (m, { conn, rcanal, text }) => {
 *┏━━━✦ ❀ ✦━━━┓*
 *┃  💕 A-aquí tienes...*  
 *┃  📡 Velocidad: ${latency} ms...*  
-*┃  💖 Soy *Anika Dm*...*  
+*┃  💖 Soy *🦋𝐀𝐧𝐢𝐤𝐚-𝐒𝐭𝐞𝐥𝐥𝐚✨..*  
 *┃  ✨ Quieres ver mi menú? Usa .menu*
 *┗━━━✦ ❀ ✦━━━┛*
 *﹕E-espero que esté bien... (>///<)*
