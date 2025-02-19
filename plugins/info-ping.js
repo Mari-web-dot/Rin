@@ -2,26 +2,31 @@ import { exec } from 'child_process';
 import { performance } from 'perf_hooks';
 import fs from 'fs';
 
-// 🌸 Handler principal con un estilo más tímido y ordenado
+/* ┏━━━━━━━━━━━━━━ ✦ ❀ ✦ ━━━━━━━━━━━━━━┓ *
+ * ┃ 💕 Handler principal ~             ┃
+ * ┃ 📡 Calcula la velocidad del bot     ┃
+ * ┃ 💻 Muestra información del sistema  ┃
+ * ┃ ✨ ¡Con un diseño más tímido!        ┃
+ * ┗━━━━━━━━━━━━━━ ✦ ❀ ✦ ━━━━━━━━━━━━━━┛ */
 let handler = async (m, { conn, rcanal }) => {
     let startTime = performance.now();
 
     try {
-        // ⏳ Ejecutar 'neofetch' con un tiempo de espera
+        /* 🌸 ─── Ejecutar el comando 'neofetch' ─── 🌸 */
         const { stdout, stderr } = await execPromise(`neofetch --stdout`, { timeout: 5000 });
 
         if (stderr) throw new Error(`neofetch stderr: ${stderr}`);
 
         let systemInfo = stdout.toString("utf-8").replace(/Memory:/, "Ram:");
 
-        // ⏱️ Medir la latencia
+        /* ⏱️ ─── Medir la latencia ─── ⏱️ */
         let endTime = performance.now();
         let latency = (endTime - startTime).toFixed(4);
 
-        // 📄 Guardar la latencia en un archivo
+        /* 📄 ─── Guardar la latencia en un archivo ─── 📄 */
         logLatency(latency);
 
-        // 🌸 Mensaje decorado y organizado
+        /* 💌 ─── Respuesta decorada y organizada ─── 💌 */
         let response = `
 *┏━━━✦ ❀ ✦━━━┓*
 *┃  💕 A-aquí tienes...*  
@@ -39,7 +44,11 @@ let handler = async (m, { conn, rcanal }) => {
     }
 };
 
-// 🌸 Función para ejecutar comandos en la terminal con promesas
+/* ┏━━━━━━━━━━━━━━━✦ ❀ ✦━━━━━━━━━━━━━━━┓ *
+ * ┃ 💕 Función para ejecutar comandos  ┃
+ * ┃ ⏳ Permite ejecutar 'neofetch'      ┃
+ * ┃ 🚀 Usa promesas para manejarlo      ┃
+ * ┗━━━━━━━━━━━━━━━✦ ❀ ✦━━━━━━━━━━━━━━━┛ */
 function execPromise(command, { timeout } = {}) {
     return new Promise((resolve, reject) => {
         const process = exec(command, (error, stdout, stderr) => {
@@ -56,7 +65,11 @@ function execPromise(command, { timeout } = {}) {
     });
 }
 
-// 🌸 Función para registrar la latencia en un archivo
+/* ┏━━━━━━━━━━━━━━━✦ ❀ ✦━━━━━━━━━━━━━━━┓ *
+ * ┃ 💕 Función para guardar la latencia┃
+ * ┃ 📄 Registra el tiempo en un archivo┃
+ * ┃ ✨ Para monitorear el rendimiento  ┃
+ * ┗━━━━━━━━━━━━━━━✦ ❀ ✦━━━━━━━━━━━━━━━┛ */
 function logLatency(latency) {
     const logMessage = `💖 Latencia: ${latency} ms - ${new Date().toISOString()}\n`;
     fs.appendFile('latency.log', logMessage, (err) => {
@@ -64,7 +77,11 @@ function logLatency(latency) {
     });
 }
 
-// 🌸 Configuración del handler
+/* ┏━━━━━━━━━━━━━━━✦ ❀ ✦━━━━━━━━━━━━━━━┓ *
+ * ┃ 💕 Configuración del comando       ┃
+ * ┃ 📡 Se activa con /ping              ┃
+ * ┃ ✨ Aparece en la categoría 'info'   ┃
+ * ┗━━━━━━━━━━━━━━━✦ ❀ ✦━━━━━━━━━━━━━━━┛ */
 handler.help = ['ping'];
 handler.tags = ['info'];
 handler.command = ['ping'];
