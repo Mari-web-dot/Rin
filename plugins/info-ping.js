@@ -13,7 +13,7 @@ let handler = async (m, { conn, rcanal, text }) => {
         let latency = (endTime - startTime).toFixed(4);
 
         // 🌸 URL personalizada si el usuario la proporciona
-        let url = text || "https://i.imgur.com/6Y2Z9jX.jpeg"; // Imagen por defecto
+        let url = text || "https://qu.ax/wmgKA.jpg"; // Imagen por defecto
 
         // 🌸 Respuesta kawaii con nombre de bot y opción de menú
         let response = `
