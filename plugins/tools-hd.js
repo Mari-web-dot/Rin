@@ -2,10 +2,10 @@ import FormData from "form-data"; import Jimp from "jimp";
 
 const handler = async (m, { conn, usedPrefix, command }) => { try { let q = m.quoted ? m.quoted : m; let mime = (q.msg || q).mimetype || q.mediaType || "";
 
-if (!mime) return m.reply(`🥺 E-eto... ¿podrías responder con una imagen para mejorarla en *HD*? Por favor... `);
+if (!mime) return m.reply("🥺 E-eto... ¿podrías responder con una imagen para mejorarla en *HD*? Por favor... 🙈");
 if (!/image\/(jpe?g|png)/.test(mime)) return m.reply(`😣 Lo siento mucho, pero el formato del archivo (${mime}) no es compatible... podrías enviarme una imagen diferente, por favor? 🥺`);
 
-conn.reply(m.chat, `✨ D-déjame intentarlo... Estoy mejorando la calidad de la imagen, dame un momento... ⏳`, m, {
+conn.reply(m.chat, "✨ D-déjame intentarlo... Estoy mejorando la calidad de la imagen, dame un momento... ⏳", m, {
   contextInfo: {
     externalAdReply: {
       mediaUrl: null,
@@ -25,7 +25,7 @@ let pr = await remini(img, "enhance");
 
 conn.sendMessage(m.chat, { image: pr }, { quoted: fkontak });
 
-} catch { return m.reply(💔 A-ah... ocurrió un error... Lo siento mucho... 😖); } };
+} catch { return m.reply("💔 A-ah... ocurrió un error... Lo siento mucho... 😖"); } };
 
 handler.help = ["remini", "hd", "enhance"]; handler.tags = ["tools"]; handler.group = true; handler.register = true; handler.command = ["remini", "hd", "enhance"];
 
