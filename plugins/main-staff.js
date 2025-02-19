@@ -7,7 +7,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 
     • Destroy
     🤴 *Rol:* Propietario
-    📱 *Número:* wa.me/584120346669
+    📱 *Número:* wa.me/5216631079388
 
     🚀  *Colaboradores:*`
 
