@@ -2,7 +2,7 @@ import { exec } from 'child_process';
 import { performance } from 'perf_hooks';
 import fs from 'fs';
 
-let handler = async (m, { conn, rcanal }) => {
+let handler = async (m, { conn, rcanal, text }) => {
     let startTime = performance.now();
 
     try {
@@ -16,16 +16,21 @@ let handler = async (m, { conn, rcanal }) => {
         // 📄 Guardar la latencia
         logLatency(latency);
 
-        // 🌸 Respuesta kawaii sin información del dispositivo
+        // 🌸 URL personalizada si el usuario la proporciona
+        let url = text || "https://i.imgur.com/6Y2Z9jX.jpeg"; // Imagen por defecto
+
+        // 🌸 Respuesta kawaii con nombre de bot y opción de menú
         let response = `
 *┏━━━✦ ❀ ✦━━━┓*
 *┃  💕 A-aquí tienes...*  
 *┃  📡 Velocidad: ${latency} ms...*  
+*┃  💖 Soy *Anika Dm*...*  
+*┃  ✨ Quieres ver mi menú? Usa .menu*
 *┗━━━✦ ❀ ✦━━━┛*
 *﹕E-espero que esté bien... (>///<)*
         `;
 
-        conn.reply(m.chat, response, m, rcanal);
+        await conn.sendFile(m.chat, url, "latency.jpg", response, m, rcanal);
     } catch (error) {
         console.error(`Error ejecutando neofetch: ${error.message}`);
 
