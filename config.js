@@ -62,7 +62,7 @@ global.etiqueta = 'Neykoor'
 global.moneda = 'Yenes'
 global.welcom1 = 'Edita Con #setwelcome'
 global.welcom2 = 'Edita Con #setbye'
-global.banner = 'https://qu.ax/BEGGH.jpg'
+global.banner = 'https://qu.ax/zxHoR.jpg'
 global.avatar = 'https://qu.ax/ryZnk.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
