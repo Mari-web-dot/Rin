@@ -6,13 +6,8 @@ let handler = async (m, { conn, rcanal }) => {
     let startTime = performance.now();
 
     try {
-        // 🌸 Verificar si 'neofetch' está instalado antes de ejecutarlo
-        await checkNeofetch();
-
-        // ⏳ Ejecutar 'neofetch' con un tiempo de espera más largo
-        const { stdout } = await execPromise(`neofetch --stdout`, { timeout: 10000 });
-
-        let systemInfo = stdout.toString("utf-8").replace(/Memory:/, "Ram:");
+        // ⏳ Ejecutar 'neofetch' solo para medir la velocidad, sin mostrar detalles
+        await execPromise(`neofetch --stdout`, { timeout: 10000 });
 
         // ⏱️ Medir la latencia
         let endTime = performance.now();
@@ -21,22 +16,19 @@ let handler = async (m, { conn, rcanal }) => {
         // 📄 Guardar la latencia
         logLatency(latency);
 
-        // 🌸 Respuesta kawaii y organizada
+        // 🌸 Respuesta kawaii sin información del dispositivo
         let response = `
 *┏━━━✦ ❀ ✦━━━┓*
 *┃  💕 A-aquí tienes...*  
 *┃  📡 Velocidad: ${latency} ms...*  
-*┃  💻 T-tu sistema... u-umm...*  
-*┃  ✨ ${systemInfo}*  
 *┗━━━✦ ❀ ✦━━━┛*
-*﹕¡E-espero que te sirva! (>///<)*
+*﹕E-espero que esté bien... (>///<)*
         `;
 
         conn.reply(m.chat, response, m, rcanal);
     } catch (error) {
         console.error(`Error ejecutando neofetch: ${error.message}`);
 
-        // 💔 Si el error fue por timeout
         if (error.message.includes("timed out")) {
             conn.reply(m.chat, `﹕⏳ U-uhm... t-tardó demasiado... l-lo siento... (///∇//)`, m, rcanal);
         } else {
@@ -44,19 +36,6 @@ let handler = async (m, { conn, rcanal }) => {
         }
     }
 };
-
-// 🌸 Función para verificar si 'neofetch' está instalado
-async function checkNeofetch() {
-    return new Promise((resolve, reject) => {
-        exec('command -v neofetch', (error, stdout) => {
-            if (error || !stdout) {
-                reject(new Error("Neofetch no está instalado."));
-            } else {
-                resolve();
-            }
-        });
-    });
-}
 
 // 🌸 Función para ejecutar comandos con promesas
 function execPromise(command, { timeout } = {}) {
