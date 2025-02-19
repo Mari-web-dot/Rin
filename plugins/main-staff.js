@@ -1,15 +1,28 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-    let staff = `✨ *EQUIPO DE AYUDANTES*
-    🤖 *Bot:* ${global.botname}
-    🌟 *Versión:* ${global.vs}
+    let colaboradores = [
+        { nombre: "Neykoor💜", rol: "Propietario", numero: "wa.me/5216631079388" },
+        { nombre: "Colaborador 1", rol: "Desarrollador", numero: "wa.me/521XXXXXXXXXX" },
+        { nombre: "Colaborador 2", rol: "Tester", numero: "wa.me/521XXXXXXXXXX" }
+    ];
 
-    👑 *Propietario:*
+    let listaColaboradores = colaboradores.map(col => `• *${col.nombre}* \n    🎭 *Rol:* ${col.rol}\n    📱 *Número:* ${col.numero}`).join("\n\n");
 
-    • Neykoor💜
-    🤴 *Rol:* Propietario
-    📱 *Número:* wa.me/5216631079388
-
-    🚀  *Colaboradores:*`
+    let staff = `U-umm... h-hola...  
+    E-estos son las personas especiales que ayudan a que yo... e-emm... funcione bien~ 💜  
+   
+    🤖 *Mi nombre:* ${global.botname}  
+    🌟 *Versión:* ${global.vs}  
+    📈 *Uhm... usuarios activos:* ${Object.keys(global.db.data.users).length} (¡G-gracias por usarme!)  
+   
+    A-ah, ellos son mis senpais...  
+   
+    👑 *M-mi propietario:*  
+    ${listaColaboradores}  
+   
+    S-si necesitas ayuda... p-puedes visitar nuestro grupito... e-es este... >//<  
+    🔗 *Grupo de soporte:*  
+    ${global.grupoSoporte || "N-no disponible... g-gomen... >///<"}  
+    `;
 
     await conn.sendFile(m.chat, icons, 'yaemori.jpg', staff.trim(), fkontak, true, {
         contextInfo: {
@@ -18,15 +31,16 @@ let handler = async (m, { conn, command, usedPrefix }) => {
             externalAdReply: {
                 showAdAttribution: true,
                 renderLargerThumbnail: false,
-                title: `Developers 👑`,  // Aquí se reemplaza el emoji
-                body: `✨ Staff Oficial`,
+                title: `U-umm... Staff Oficial 💜`,
+                body: `G-gracias por confiar en mí >///<`,
                 mediaType: 1,
                 sourceUrl: redes,
                 thumbnailUrl: icono
             }
         }
-    }, { mentions: m.sender })
-    m.react(emoji)
+    }, { mentions: m.sender });
+
+    m.react(emoji);
 }
 
 handler.help = ['staff']
