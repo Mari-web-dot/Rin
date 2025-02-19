@@ -22,7 +22,6 @@ let handler = async (m, { conn, args }) => {
 │❖ Rango » ${role}
 │${dev}
 ╰─────────────────
-ᥴrᥱᥲ ᥙᥒ sᥙᑲ-ᑲ᥆𝗍 ᥴ᥆ᥒ 𝗍ᥙ ᥒúmᥱr᥆ ᥙ𝗍іᥣіzᥲᥒძ᥆ *#serbot* o *#serbot code*
 
 »  ⊹˚• \`Info-Bot\` •˚⊹
 
