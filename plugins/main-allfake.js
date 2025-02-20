@@ -41,7 +41,7 @@ global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => '
 //Ids channel
 global.idchannel = '120363392571425662@newsletter'
 global.canalIdM = ["120363393500238364@newsletter", "120363392571425662@newsletter"]
-global.canalNombreM = ["♡ -💉 ׅ ᩡ ׂ 𝗦𝕙i𝐧𝒐𝚋𝑢 𝕂𝒐𝐜𝚑𝗈 ׂ ᠀ 𑅆  !  - 𝐮𝐩𝐝𝐝𝐚𝐭𝐞𝐬 ❀", "ᥫ᭡ 🦋𝐀𝐧𝐢𝐤𝐚-𝐒𝐭𝐞𝐥𝐥𝐚✨ - 𝐚𝐯𝐢𝐬𝐨𝐬 ❀"]
+global.canalNombreM = ["♡ -💉 ׅ ᩡ ׂ 𝗦𝕙i𝐧𝒐𝚋𝑢 𝕂𝒐𝐜𝚑𝗈 ׂ ᠀ 𑅆  !  - 𝐮𝐩𝐝𝐝𝐚𝐭𝐞𝐬 ❀", "♡ -💉 ׅ ᩡ ׂ 𝗦𝕙i𝐧𝒐𝚋𝑢 𝕂𝒐𝐜𝚑𝗈 ׂ ᠀ 𑅆   - 𝐚𝐯𝐢𝐬𝐨𝐬 ❀"]
 global.channelRD = await getRandomChannel()
 
 //fechas
