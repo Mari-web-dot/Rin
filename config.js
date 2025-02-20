@@ -62,7 +62,7 @@ global.etiqueta = '𝗖a𝗋𝗻𝕖𝐭s.'
 global.moneda = 'Yenes'
 global.welcom1 = 'Edita Con #setwelcome'
 global.welcom2 = 'Edita Con #setbye'
-global.banner = 'https://qu.ax/pebMD.jpg'
+global.banner = 'https://qu.ax/PBfju.jpg'
 global.avatar = 'https://qu.ax/DQHWS.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
