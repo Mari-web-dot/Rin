@@ -42,7 +42,7 @@ global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => '
 global.idchannel = '120363392571425662@newsletter'
 global.canalIdM = ["120363393500238364@newsletter", "120363392571425662@newsletter"]
 global.canalNombreM = ["♡ -💉 ׅ ᩡ ׂ 𝗦𝕙i𝐧𝒐𝚋𝑢 𝕂𝒐𝐜𝚑𝗈 ׂ ᠀ 𑅆  !  - 𝐮𝐩𝐝𝐝𝐚𝐭𝐞𝐬 ❀", "♡ -💉 ׅ ᩡ ׂ 𝗦𝕙i𝐧𝒐𝚋𝑢 𝕂𝒐𝐜𝚑𝗈 ׂ ᠀ 𑅆   - 𝐚𝐯𝐢𝐬𝐨𝐬 ❀"]
-global.channelRD = await getRandomChannel()
+global.channelRD = await getRandomChannel(
 
 //fechas
 global.d = new Date(new Date + 3600000)
@@ -61,10 +61,10 @@ global.msm = '⚠️'
 
 //Emojis determinado de Yuki Bot
 global.emoji = '🍓'
-global.emoji2 = '🧨'
+global.emoji2 = '🍓'
 global.emoji3 = '🧣'
-global.emoji4 = '🥢'
-global.emoji5 = '🎀'
+global.emoji4 = ''🧣
+global.emoji5 = '🎒'
 global.emojis = [emoji, emoji2, emoji3, emoji4].getRandom()
 
 //mensaje en espera
