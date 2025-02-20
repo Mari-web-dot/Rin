@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn }) => {
-  const contact = ["5216631079388", "Anika Dm", 1];
-  const [number, name] = contact;
+  const contact = ["+52 33 2970 3781", "carnets", 1];
+  const [number, name] = contact;+52 33 2970 3781
   const jid = `${number}@s.whatsapp.net`;
 
   let displayName;
@@ -21,16 +21,16 @@ let handler = async (m, { conn }) => {
   }
 
   let mensaje = `*╔══════════════════╗*\n`;
-  mensaje += `*║ 💞 CREADOR DE LA BOT 💋*  \n`;
+  mensaje += `*║  CREADOR DE LA BOT *  \n`;
   mensaje += `*╚══════════════════╝*\n\n`;
 
-  mensaje += `📢 *¡Hey! Aquí tienes la información de mi creador!* 👇\n\n`;
+  mensaje += ` *¡Hey! Aquí tienes la información de mi creador!* 🩸 :
 
   mensaje += `💖 *Nombre:* ${displayName}\n`;
   mensaje += `📜 *Bio:* ${bio}\n\n`;
 
-  mensaje += `🔹 Si tienes dudas, sugerencias o quieres reportar algo, contáctame. 😎\n\n`;
-  mensaje += `✨ *¡Gracias por usar mi bot!* 💖\n\n`;
+  mensaje += `🔹 Si tienes dudas, sugerencias o quieres reportar algo, contáctame.
+  mensaje += ` *¡Gracias por usar mi bot!.* 🍓
 
   // URL del video (MP4)
   const videoUrl = 'https://qu.ax/TNCDy.mp4'; // Asegúrate de que dure menos de 6 segundos
