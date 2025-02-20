@@ -8,18 +8,18 @@ let handler = async (m, { conn }) => {
   let imageUrl = uptime >= 86400 ? image2 : image1; // Si el bot lleva más de un día, cambia la imagen  
 
   let runtimeMessage = `  
-  🩸━━━━━━━━━━🦋 
+ . ׄ  ..︵᷼⏜╲⋱  ׅ    ׄ   ݄│⁝   ݄  ֺ  ⋰╱⏜᷼︵ֺ۪۪.
   *A-ah.. ¿M-me estabas buscando?*  
   💉 *𝗦̸̷𝕙᪶î̶𝐧𝒐̶𝚋̸̷𝑢 𝕂̌𝒐𝐜̸̷𝚑̶᪾𝗈* sigue aquí, a tu lado...  
    Siempre lista para ayudarte.  
-  ━━━━━━━━━━━━━━━━━━  
+      ᷒͝ ᷭ ۪   ᷒͝ ᷭ ۪   ᷒͝ ᷭ ۪   ᷒͝ ᷭ ۪   ᷒͝ ᷭ  ꒰͜͡ 💉 ͜͡꒱   ͝  ᷒ ᷭ
    *Tiempo activo:*  
    ${uptimeText}  
   ━━━━━━━━━━━━━━━━━━  
-  🍓 Espero te sirva....  
+  🗡️ Espero te sirva....  
   🧣 hacemos nuestro mejor esfuerzo...  
   🩸 Gracias por contar conmigo...  
-  💉━━━━━━━━━━🩸  
+  💉ㅤ𑂴  𑂴  𑂴  𑂴  𑂴  𑂴 ׅ ⪩࣮  ࣮⪨ ׅ   𑂴  𑂴  𑂴  𑂴  𑂴ㅤㅤ🩸  
   `;  
 
   // Enviar imagen con el mensaje decorado  
