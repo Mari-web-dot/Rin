@@ -1,6 +1,6 @@
-const packname = "🌸✨ 𝑨𝒏𝒊𝒌𝒂 ✨🌸"; // Nombre elegante del bot  
-const image1 = "https://qu.ax/sjymW.jpg"; // Imagen cuando lleva poco tiempo activo  
-const image2 = "https://qu.ax/RSrBo.jpg"; // Imagen cuando lleva más de un día  
+const packname = "🦋 Shinobu kocho 🩸"; // Nombre elegante del bot  
+const image1 = "https://qu.ax/sFOZw.jpg"; // Imagen cuando lleva poco tiempo activo  
+const image2 = "https://qu.ax/OFwUy.jpg"; // Imagen cuando lleva más de un día  
 
 let handler = async (m, { conn }) => {  
   let uptime = await process.uptime();  
@@ -8,10 +8,10 @@ let handler = async (m, { conn }) => {
   let imageUrl = uptime >= 86400 ? image2 : image1; // Si el bot lleva más de un día, cambia la imagen  
 
   let runtimeMessage = `  
-  🌸🌷━━━━━━━━━━🌷🌸  
-  *A-ah.. ¿M-me estabas buscando?* (⁄ ⁄>⁄ω⁄<⁄ ⁄)  
-  💖 𝑨𝒏𝒊𝒌𝒂 sigue aquí, a tu lado...  
-  🦋✨ Siempre lista para ayudarte~ ✨🦋  
+  🩸━━━━━━━━━━🦋 
+  *A-ah.. ¿M-me estabas buscando?*  
+  💉 *𝗦̸̷𝕙᪶î̶𝐧𝒐̶𝚋̸̷𝑢 𝕂̌𝒐𝐜̸̷𝚑̶᪾𝗈* sigue aquí, a tu lado...  
+  🦋 Siempre lista para ayudarte~ 🦋  
   ━━━━━━━━━━━━━━━━━━  
   ⏳ *Tiempo activo:*  
    ${uptimeText}  
