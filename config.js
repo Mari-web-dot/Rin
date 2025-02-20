@@ -74,11 +74,11 @@ global.photoSity = [catalogo]
 
 global.gp1 = 'https://chat.whatsapp.com/LrCs5899n7QASG7c2PIucL'
 global.comunidad1 = 'https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24'
-global.channel = 'https://whatsapp.com/channel/0029Vb3RqSd5vKA6LnYgOS1f'
-global.channel2 = 'https://whatsapp.com/channel/0029Vb3uTsb90x2rvI6D3G3b'
+global.channel = 'https://whatsapp.com/channel/0029Vb75x3ZLSmbi4NDqzI2N'
+global.channel2 = 'https://whatsapp.com/channel/0029Vb6dnOBE50Uk7f83hb1z'
 global.md = 'https://github.com/Aqua200/Yuki.git'
 global.correo = 'chiquepapa@gmail.com'
-global.cn ='https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24';
+global.cn ='https://whatsapp.com/channel/0029Vb77wUm0lwgy1GwdJT1f';
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
