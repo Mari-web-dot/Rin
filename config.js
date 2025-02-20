@@ -52,9 +52,9 @@ global.yukiJadibts = true
 global.packname = '🍓 Shino. '
 global.botname = '🍓 shino. '
 global.wm = '🍓 shino. '
-global.author = '𝐌𝐚𝐝𝐞 𝐁𝐲 𝐢𝐚𝐦 𝐍𝐞𝐲𝐤𝐨𝐨𝐫 '
-global.dev = '𝗽𝗼𝘄𝗲𝗿 𝗯𝘆 𝗡𝗲𝘆𝗸𝗼𝗼𝗿💜'
-global.textbot = '🍓 shino. • 𝐩𝐨𝐰𝐞𝐫 𝐛𝐲 𝐍𝐞𝐲𝐤𝐨𝐨𝐫'
+global.author = '𝐌𝐚𝐝𝐞 𝐁𝐲 𝐢𝐚𝐦 carnets '
+global.dev = '𝗽𝗼𝘄𝗲𝗿 𝗯𝘆 🍓 carnets. 🩸'
+global.textbot = '🍓 shino. • 𝐩𝐨𝐰𝐞𝐫 𝐛𝐲 carnets'
 global.etiqueta = 'carnets.'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
