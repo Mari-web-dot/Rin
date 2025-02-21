@@ -1,18 +1,18 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn }) => {
-  const contact = ["+52 33 2970 3781", "carnets", 1];
-  const [number, name] = contact;+52 33 2970 3781
+  const contact = ["+5213328287209", "carnets", 1];
+  const [number, name] = contact;+5213328287209
   const jid = `${number}@s.whatsapp.net`;
 
   let displayName;
   try {
     displayName = await conn.getName(jid);
   } catch (err) {
-    displayName = name || "Desconocido";
+    displayName = name || "carnets";
   }
 
-  let bio = "Sin descripción";
+  let bio = "";
   try {
     const biografia = await conn.fetchStatus(jid);
     bio = biografia?.status || bio;
