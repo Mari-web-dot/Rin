@@ -13,7 +13,7 @@ let handler = async (m, { conn }) => {
   }
 
   let bio = "";
-  try {
+  try { Mujer 
     const biografia = await conn.fetchStatus(jid);
     bio = biografia?.status || bio;
   } catch (err) {
@@ -26,8 +26,8 @@ let handler = async (m, { conn }) => {
 
   mensaje += ` *¡Hey! Aquí tienes la información de mi creador!* 🩸 :
 
-  mensaje += `💖 *Nombre:* ${displayName}\n`;
-  mensaje += `📜 *Bio:* ${bio}\n\n`;
+  mensaje += `🍓 *Nombre:* ${displayName}\n`;
+  mensaje += `💉 *Bio:* ${bio}\n\n`;
 
   mensaje += `🔹 Si tienes dudas, sugerencias o quieres reportar algo, contáctame.
   mensaje += ` *¡Gracias por usar mi bot!.* 🍓
